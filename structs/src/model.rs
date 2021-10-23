@@ -3,6 +3,18 @@ pub struct User {
    email: String 
 }
 
-impl User {
-   pub fn add(&mut self, value: i32) -> 
+trait summary {
+   fn summarize(value: &string)
+}
+
+// implementing a trait for the user struct
+impl summary for User {
+   pub fn add(&mut self, value: i32){
+      self.list.push(&value);
+      self.update_average()
+   }
+
+   pub fn remove(&mut self, value: i32) -> i32 {
+      self.list.pop(&value);
+   }
 }
